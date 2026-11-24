@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Top Car Santiago | Seminovos e Volkswagen 0 km em Santiago/RS</title>
+  <meta name="description" content="Revenda de carros 0 km e seminovos com serviços de pós-venda em Santiago/RS. Revendedor autorizado Pampeiro Volkswagen. Financiamento, troca e atendimento pelo WhatsApp.">
+  <meta name="theme-color" content="#24457d">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Top Car Santiago — Seminovos e Volkswagen 0 km">
+  <meta property="og:description" content="Realize seu sonho conosco! Seminovos selecionados, VW 0 km, financiamento e troca.">
+  <meta property="og:image" content="img/carros/vw-nivus-highline-2026.jpg">
+  <link rel="icon" href="img/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800;900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "AutoDealer",
+    "name": "Top Car Santiago",
+    "description": "Revenda de carros 0 km e seminovos com serviços de pós-venda. Revendedor autorizado Pampeiro Volkswagen.",
+    "telephone": "+55 55 99983-2239",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "R. Alceu Duarte de Carvalho, 530 - Zamperetti",
+      "postalCode": "97700-000",
+      "addressLocality": "Santiago",
+      "addressRegion": "RS",
+      "addressCountry": "BR"
+    },
+    "sameAs": ["https://www.instagram.com/topcarsantiago/"]
+  }
+  </script>
+</head>
+<body data-page="home">
+
+  <main>
+    <!-- HERO -->
+    <section class="hero">
+      <div class="container hero__inner">
+        <div class="hero__text">
+          <span class="eyebrow">Revendedor autorizado Pampeiro Volkswagen</span>
+          <h1>Realize seu sonho <span>conosco!</span></h1>
+          <p>Seminovos selecionados, Volkswagen 0 km e pós-venda completo em Santiago/RS. Negocie direto pelo WhatsApp, com financiamento e seu usado na troca.</p>
+
+          <form class="search" id="busca" role="search" aria-label="Buscar veículos">
+            <div class="search__tabs" role="radiogroup">
+              <label><input type="radio" name="tipo" value="seminovo" checked><span>Seminovos</span></label>
+              <label><input type="radio" name="tipo" value="0km"><span>0 km VW</span></label>
+            </div>
+            <div class="search__fields">
+              <select name="marca" id="q-marca" aria-label="Marca"><option value="">Todas as marcas</option></select>
+              <input name="q" placeholder="Modelo (ex: Nivus, Creta...)" aria-label="Modelo">
+              <select name="max" aria-label="Preço até">
+                <option value="">Preço até</option>
+                <option value="60000">R$ 60 mil</option>
+                <option value="80000">R$ 80 mil</option>
+                <option value="100000">R$ 100 mil</option>
+                <option value="120000">R$ 120 mil</option>
+                <option value="150000">R$ 150 mil</option>
+              </select>
+              <button class="btn btn--accent" type="submit">Buscar</button>
+            </div>
+          </form>
+
+          <ul class="hero__stats">
+            <li><strong id="count-semi">6</strong><span>seminovos no pátio</span></li>
+            <li><strong>0 km</strong><span>linha Volkswagen</span></li>
+            <li><strong>Pós-venda</strong><span>oficina autorizada</span></li>
+          </ul>
+        </div>
+
+        <a class="hero__offer" href="veiculo.html?id=vw-nivus-highline-2026" aria-label="Ver oferta: VW Nivus Highline 2026">
+          <span class="hero__offer-tag">Oferta em destaque</span>
+          <img src="img/carros/vw-nivus-highline-2026.jpg" alt="VW Nivus Highline 2026 vermelho" fetchpriority="high">
+        </a>
+      </div>
+    </section>
+
+    <!-- DESTAQUES -->
+    <section class="section">
+      <div class="container">
+        <div class="section__head">
+          <div>
+            <span class="eyebrow eyebrow--dark">Estoque</span>
+            <h2>Seminovos em destaque</h2>
+          </div>
+          <a href="estoque.html?tipo=seminovo" class="link-more">Ver todos os seminovos →</a>
+        </div>
+        <div class="grid" id="destaques"></div>
+      </div>
+    </section>
+
+    <!-- 0 KM -->
+    <section class="section section--vw" id="zero-km">
+      <div class="container">
+        <div class="section__head">
+          <div>
+            <span class="eyebrow">Pampeiro Volkswagen</span>
+            <h2>Volkswagen 0 km</h2>
+            <p class="section__sub">Toda a linha VW com condições de concessionária. Peça sua cotação e receba versões, cores e prazos de entrega.</p>
+          </div>
+          <a href="estoque.html?tipo=0km" class="link-more link-more--light">Ver linha completa →</a>
+        </div>
+        <div class="grid" id="zerokm"></div>
+      </div>
+    </section>
+
+    <!-- DIFERENCIAIS -->
+    <section class="section">
+      <div class="container">
+        <div class="section__head section__head--center">
+          <span class="eyebrow eyebrow--dark">Por que a Top Car</span>
+          <h2>Compra segura, do início ao pós-venda</h2>
+        </div>
+        <div class="features">
+          <div class="feature">
+            <div class="feature__icon">✓</div>
+            <h3>Procedência garantida</h3>
+            <p>Seminovos revisados e com documentação conferida antes de chegar ao pátio.</p>
+          </div>
+          <div class="feature">
+            <div class="feature__icon">%</div>
+            <h3>Financiamento facilitado</h3>
+            <p>Trabalhamos com os principais bancos para encontrar a parcela que cabe no seu bolso.</p>
+          </div>
+          <div class="feature">
+            <div class="feature__icon">⇄</div>
+            <h3>Seu usado na troca</h3>
+            <p>Avaliação justa e rápida do seu carro como parte do pagamento.</p>
+          </div>
+          <div class="feature">
+            <div class="feature__icon">⚙</div>
+            <h3>Pós-venda completo</h3>
+            <p>Oficina com assistência técnica, revisões, peças e serviços no mesmo endereço.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FINANCIAMENTO + VENDA SEU CARRO -->
+    <section class="section section--alt">
+      <div class="container two-col">
+        <div class="panel" id="financiamento">
+          <span class="eyebrow eyebrow--dark">Financiamento</span>
+          <h2>Simule seu financiamento</h2>
+          <p>Preencha os dados e receba a simulação de um consultor pelo WhatsApp. Sem compromisso.</p>
+          <form data-wa="Gostaria de *simular um financiamento*." class="form">
+            <label>Seu nome<input name="nome" data-label="Nome" required autocomplete="name"></label>
+            <label>Veículo de interesse<input name="veiculo" data-label="Veículo de interesse" placeholder="Ex.: Nivus Highline 2023"></label>
+            <div class="form__row">
+              <label>Valor de entrada<input name="entrada" data-label="Entrada" inputmode="numeric" placeholder="R$"></label>
+              <label>Parcelas
+                <select name="parcelas" data-label="Parcelas">
+                  <option value="">Selecione</option>
+                  <option>24x</option><option>36x</option><option>48x</option><option>60x</option>
+                </select>
+              </label>
+            </div>
+            <button class="btn btn--wa btn--block" type="submit"><span class="wa-ico"></span>Simular pelo WhatsApp</button>
+          </form>
+        </div>
+
+        <div class="panel" id="venda-seu-carro">
+          <span class="eyebrow eyebrow--dark">Venda ou troca</span>
+          <h2>Avaliamos seu carro</h2>
+          <p>Quer vender ou usar seu carro na troca? Mande os dados e fotos pelo WhatsApp para uma avaliação.</p>
+          <form data-wa="Quero *avaliar meu carro* para venda/troca." class="form">
+            <label>Seu nome<input name="nome" data-label="Nome" required autocomplete="name"></label>
+            <div class="form__row">
+              <label>Marca / modelo<input name="modelo" data-label="Marca/modelo" required placeholder="Ex.: VW Gol 1.0"></label>
+              <label>Ano<input name="ano" data-label="Ano" inputmode="numeric" placeholder="Ex.: 2019"></label>
+            </div>
+            <div class="form__row">
+              <label>Quilometragem<input name="km" data-label="Km" inputmode="numeric" placeholder="Ex.: 65.000"></label>
+              <label>Objetivo
+                <select name="objetivo" data-label="Objetivo">
+                  <option>Usar na troca</option>
+                  <option>Vender</option>
+                </select>
+              </label>
+            </div>
+            <button class="btn btn--wa btn--block" type="submit"><span class="wa-ico"></span>Enviar para avaliação</button>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- PÓS-VENDA -->
+    <section class="section" id="pos-venda">
+      <div class="container">
+        <div class="section__head">
+          <div>
+            <span class="eyebrow eyebrow--dark">Pós-venda</span>
+            <h2>Oficina e serviços</h2>
+            <p class="section__sub">Assistência técnica, revisões e manutenção com quem entende do seu carro.</p>
+          </div>
+          <a class="btn btn--wa" data-wa-link="Olá, Top Car! Gostaria de *agendar um serviço* na oficina. Meu carro é: ">Agendar serviço</a>
+        </div>
+        <div class="services">
+          <div class="service"><h3>Revisões</h3><p>Revisões programadas conforme o manual do fabricante.</p></div>
+          <div class="service"><h3>Troca de óleo</h3><p>Óleo e filtros com especificação correta para seu motor.</p></div>
+          <div class="service"><h3>Freios</h3><p>Pastilhas, discos e fluido para sua segurança.</p></div>
+          <div class="service"><h3>Suspensão</h3><p>Amortecedores, alinhamento e componentes.</p></div>
+          <div class="service"><h3>Peças</h3><p>Peças de qualidade com procedência.</p></div>
+          <div class="service"><h3>Assistência técnica</h3><p>Diagnóstico e reparo com equipe especializada.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- AVALIAÇÕES -->
+    <section class="section section--alt" id="avaliacoes">
+      <div class="container">
+        <div class="section__head section__head--center">
+          <span class="eyebrow eyebrow--dark">Avaliações no Google</span>
+          <h2>Quem compra, recomenda</h2>
+        </div>
+        <div class="reviews">
+          <figure class="review">
+            <div class="review__stars" role="img" aria-label="5 de 5 estrelas">★★★★★</div>
+            <blockquote>“Empresa correta.”</blockquote>
+            <figcaption>José Carlos V. · Local Guide</figcaption>
+          </figure>
+          <figure class="review">
+            <div class="review__stars" role="img" aria-label="5 de 5 estrelas">★★★★★</div>
+            <blockquote>“Maravilhosa.”</blockquote>
+            <figcaption>Simone F. · Local Guide</figcaption>
+          </figure>
+        </div>
+        <p class="reviews__more"><a id="link-google" target="_blank" rel="noopener">Ver todas as avaliações no Google →</a></p>
+      </div>
+    </section>
+
+    <!-- CONTATO -->
+    <section class="section" id="contato">
+      <div class="container two-col two-col--contact">
+        <div>
+          <span class="eyebrow eyebrow--dark">Contato</span>
+          <h2>Venha tomar um café com a gente</h2>
+          <ul class="contact-list">
+            <li><strong>Endereço</strong><span><span data-cfg="endereco"></span> · <span data-cfg="cidade"></span></span></li>
+            <li><strong>WhatsApp</strong><a data-wa-link="Olá, Top Car! Vim pelo site." data-cfg="whatsappExibicao"></a></li>
+            <li><strong>Telefone</strong><a href="tel:+555532510800" data-cfg="telefoneExibicao"></a></li>
+            <li><strong>Instagram</strong><a href="https://www.instagram.com/topcarsantiago/" target="_blank" rel="noopener">@topcarsantiago</a></li>
+          </ul>
+          <a class="btn btn--wa btn--lg" data-wa-link="Olá, Top Car! Vim pelo site e gostaria de atendimento.">Chamar no WhatsApp</a>
+        </div>
+        <div class="map">
+          <iframe id="mapa" title="Mapa — Top Car Santiago" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script src="js/config.js"></script>
+  <script src="js/data.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>

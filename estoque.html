@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Estoque | Top Car Santiago — Seminovos e VW 0 km</title>
+  <meta name="description" content="Confira o estoque de seminovos e Volkswagen 0 km da Top Car Santiago. Filtre por marca, preço, ano e câmbio e negocie pelo WhatsApp.">
+  <meta name="theme-color" content="#24457d">
+  <link rel="icon" href="img/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800;900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="estoque">
+
+  <main>
+    <section class="page-hero">
+      <div class="container">
+        <h1 id="estoque-titulo">Seminovos</h1>
+        <p id="estoque-count">Carregando…</p>
+      </div>
+    </section>
+
+    <div class="container estoque">
+      <button class="btn btn--ghost filtros-toggle" id="toggle-filtros" type="button">Filtros</button>
+
+      <form class="filtros" id="filtros" aria-label="Filtros do estoque">
+        <div class="filtros__head">
+          <h2>Filtrar</h2>
+          <button type="button" class="btn btn--link" id="limpar">Limpar</button>
+        </div>
+
+        <label>Tipo
+          <select name="tipo">
+            <option value="seminovo">Seminovos</option>
+            <option value="0km">0 km Volkswagen</option>
+            <option value="">Todos</option>
+          </select>
+        </label>
+        <label>Buscar
+          <input name="q" type="search" placeholder="Modelo, versão, cor…">
+        </label>
+        <label>Marca
+          <select name="marca"><option value="">Todas</option></select>
+        </label>
+        <label>Carroceria
+          <select name="carroceria"><option value="">Todas</option></select>
+        </label>
+        <label>Câmbio
+          <select name="cambio">
+            <option value="">Todos</option>
+            <option value="automático">Automático</option>
+            <option value="manual">Manual</option>
+          </select>
+        </label>
+        <label>Preço até
+          <select name="max">
+            <option value="">Sem limite</option>
+            <option value="60000">R$ 60 mil</option>
+            <option value="80000">R$ 80 mil</option>
+            <option value="100000">R$ 100 mil</option>
+            <option value="120000">R$ 120 mil</option>
+            <option value="150000">R$ 150 mil</option>
+          </select>
+        </label>
+        <label>Ano a partir de
+          <select name="anoMin">
+            <option value="">Qualquer</option>
+            <option>2018</option><option>2020</option><option>2022</option><option>2024</option>
+          </select>
+        </label>
+        <label>Ordenar por
+          <select name="ordem">
+            <option value="relevancia">Destaques</option>
+            <option value="menor">Menor preço</option>
+            <option value="maior">Maior preço</option>
+            <option value="ano">Mais novos</option>
+          </select>
+        </label>
+        <button class="btn btn--primary btn--block filtros__apply" type="button" onclick="document.body.classList.remove('filtros-open')">Ver resultados</button>
+      </form>
+
+      <div class="grid grid--estoque" id="estoque-grid"></div>
+    </div>
+  </main>
+
+  <script src="js/config.js"></script>
+  <script src="js/data.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
