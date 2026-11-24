@@ -2,5 +2,9 @@
 node_modules/
 .vercel
 .env*
-topcarsantiago.zip
+*.zip
 image.png
+# fotos originais (as versões otimizadas ficam em img/)
+/amarok.png
+/nivus.png
+/t-cross.png

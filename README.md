@@ -14,7 +14,7 @@ css/style.css       → todo o visual (variáveis de cor no topo)
 js/config.js        → WhatsApp, telefones, endereço, horário, URL do site  ← EDITAR
 js/data.js          → estoque de veículos                                 ← EDITAR
 js/app.js           → header/footer, cards, filtros, mensagens de WhatsApp
-img/                → logo, favicon, fotos dos carros, placeholder
+img/                → logo, favicon, fotos (carros/ = seminovos, 0km/ = linha VW, tera/ = hero 3D), placeholder
 vercel.json         → URLs limpas (/estoque, /veiculo?id=…)
 CLAUDE.md           → contexto do projeto para o Claude Code
 PROMPTS.md          → prompts prontos para evoluir o site com o Claude Code
@@ -77,3 +77,5 @@ Abra `js/data.js`, copie um bloco e edite. Fotos em `img/carros/` (use `.jpg`/`.
 - [ ] Trocar as **fotos dos posts** (têm texto e preço por cima) por fotos limpas, idealmente várias por carro.
 - [ ] Remover os **placeholders** (`placeholder: true`) e preencher a linha 0 km com fotos oficiais/da loja.
 - [ ] Autorização da loja para uso de marca/fotos.
+- [ ] **Tera na hero**: só frente e lateral estão no ar. As vistas traseiras recebidas tinham a placa de outra loja ("Autohype"); quando houver fotos próprias/oficiais, salvar como `img/tera/tera-traseira-34.webp` e `tera-traseira.webp` (1400×600, fundo transparente) e descomentar no `index.html`.
+- [ ] Fotos 0 km de Polo, Virtus, Taos e Saveiro (Tera, Nivus, T-Cross e Amarok já têm). Salvar em `img/0km/<id>.webp`.

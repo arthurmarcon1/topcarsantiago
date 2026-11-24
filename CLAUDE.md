@@ -13,8 +13,9 @@ Instagram da loja: https://www.instagram.com/topcarsantiago/
 
 ## Arquivos
 - `js/config.js` — dados da loja (WhatsApp, telefones, endereço, horário, `siteUrl`). Única fonte desses dados.
-- `js/data.js` — array `window.TOPCAR_VEICULOS`. Campos: id, tipo ("seminovo"|"0km"), marca, modelo, versao, ano, preco (number|null), km (number|null), cambio, combustivel, cor, carroceria, fotos[], destaque, opcionais[], descricao, placeholder.
+- `js/data.js` — array `window.TOPCAR_VEICULOS`. Campos: id, tipo ("seminovo"|"0km"), marca, modelo, versao, ano, preco (number|null), km (number|null), cambio, combustivel, cor, carroceria, fotos[], destaque, opcionais[], descricao, placeholder, recorte (true = foto com fundo transparente/branco → card mostra o carro inteiro).
 - `js/app.js` — header/footer/FAB injetados via JS; `card(v)`; páginas `home`, `estoque`, `veiculo` (detectadas por `body[data-page]`); formulários com `form[data-wa]` viram mensagem de WhatsApp (usa `data-label` de cada campo).
+- `css/tera-hero.css` + `js/tera-hero.js` — componente 3D do VW Tera na hero da home (vistas em `img/tera/`).
 - `css/style.css` — variáveis no `:root` (azul Top Car `--blue #385b94`, `--blue-700`, `--navy`, `--vw #001e50`, `--accent`, `--wa`).
 
 ## Regras

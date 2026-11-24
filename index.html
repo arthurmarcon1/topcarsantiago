@@ -11,10 +11,12 @@
   <meta property="og:description" content="Realize seu sonho conosco! Seminovos selecionados, VW 0 km, financiamento e troca.">
   <meta property="og:image" content="img/carros/vw-nivus-highline-2026.jpg">
   <link rel="icon" href="img/favicon.svg" type="image/svg+xml">
+  <link rel="preload" as="image" href="img/tera/tera-frente.webp" type="image/webp">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800;900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/tera-hero.css">
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -72,10 +74,28 @@
           </ul>
         </div>
 
-        <a class="hero__offer" href="veiculo.html?id=vw-nivus-highline-2026" aria-label="Ver oferta: VW Nivus Highline 2026">
-          <span class="hero__offer-tag">Oferta em destaque</span>
-          <img src="img/carros/vw-nivus-highline-2026.jpg" alt="VW Nivus Highline 2026 vermelho" fetchpriority="high">
-        </a>
+        <!-- HERO 3D — Volkswagen Tera (css/tera-hero.css + js/tera-hero.js) -->
+        <div class="tera" id="tera" aria-roledescription="carrossel" aria-label="Novo Volkswagen Tera — vistas do carro">
+          <span class="tera__word" aria-hidden="true">TERA</span>
+          <div class="tera__stage" id="tera-stage" tabindex="0" aria-live="polite">
+            <div class="tera__floor" aria-hidden="true"></div>
+            <div class="tera__view" data-label="Frente"><img src="img/tera/tera-frente.webp" alt="Volkswagen Tera — frente 3/4" fetchpriority="high"></div>
+            <div class="tera__view" data-label="Lateral"><img src="img/tera/tera-lateral.webp" alt="Volkswagen Tera — lateral" loading="lazy"></div>
+            <!-- Vistas traseiras: adicionar img/tera/tera-traseira-34.webp e tera-traseira.webp quando houver fotos próprias -->
+            <div class="tera__shadow" aria-hidden="true"></div>
+          </div>
+          <div class="tera__dots" role="tablist" aria-label="Escolher ângulo"></div>
+          <div class="tera__hint" aria-hidden="true">⟵ arraste para girar ⟶</div>
+          <div class="tera__bar">
+            <div class="tera__title">
+              <small>Novo Volkswagen</small>
+              <strong>Tera <span>0 km</span></strong>
+            </div>
+            <a class="btn btn--accent tera__cta"
+               data-whatsapp="5555999832239"
+               data-msg="Olá, Top Car! Quero uma cotação do *Volkswagen Tera 0 km*. Pode me passar versões, cores e condições?">Cotar o Tera</a>
+          </div>
+        </div>
       </div>
     </section>
 
@@ -257,5 +277,6 @@
   <script src="js/config.js"></script>
   <script src="js/data.js"></script>
   <script src="js/app.js"></script>
+  <script src="js/tera-hero.js" defer></script>
 </body>
 </html>

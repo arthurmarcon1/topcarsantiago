@@ -5,6 +5,7 @@
    - km: número ou null para "Consulte"
    - fotos: caminhos em /img/carros (a 1ª é a capa)
    - placeholder: true = card de exemplo (remover quando tiver o carro real)
+   - recorte: true = foto com fundo transparente/branco (mostra o carro inteiro no card)
    ⚠️ Km, cor e opcionais dos carros reais precisam ser confirmados com a loja.
    ========================================================= */
 window.TOPCAR_VEICULOS = [
@@ -169,13 +170,13 @@ window.TOPCAR_VEICULOS = [
     descricao: "Veículo de exemplo — substituir pelo estoque real.",
   },
 
-  /* ---------------- 0 KM VOLKSWAGEN (placeholders de linha) ---------------- */
+  /* ---------------- 0 KM VOLKSWAGEN (com foto primeiro, placeholders depois) ---------------- */
+  { id: "vw-tera-0km", tipo: "0km", marca: "Volkswagen", modelo: "Tera", versao: "Linha 2027", ano: "0 km", preco: null, km: 0, cambio: "Manual / Automático", combustivel: "Flex", cor: "Várias", carroceria: "SUV", fotos: ["img/tera/tera-frente.webp", "img/tera/tera-lateral.webp"], recorte: true, destaque: true, descricao: "Consulte versões, cores e condições especiais de lançamento." },
+  { id: "vw-nivus-0km", tipo: "0km", marca: "Volkswagen", modelo: "Nivus", versao: "Linha 2027", ano: "0 km", preco: null, km: 0, cambio: "Automático", combustivel: "Flex", cor: "Várias", carroceria: "SUV", fotos: ["img/0km/vw-nivus-0km.webp"], descricao: "Consulte versões, cores e condições especiais de lançamento." },
+  { id: "vw-tcross-0km", tipo: "0km", marca: "Volkswagen", modelo: "T-Cross", versao: "Linha 2027", ano: "0 km", preco: null, km: 0, cambio: "Automático", combustivel: "Flex", cor: "Várias", carroceria: "SUV", fotos: ["img/0km/vw-tcross-0km.webp"], descricao: "Consulte versões, cores e condições especiais de lançamento." },
+  { id: "vw-amarok-0km", tipo: "0km", marca: "Volkswagen", modelo: "Amarok", versao: "Linha 2027", ano: "0 km", preco: null, km: 0, cambio: "Automático", combustivel: "Diesel", cor: "Várias", carroceria: "Picape", fotos: ["img/0km/vw-amarok-0km.webp"], recorte: true, descricao: "Consulte versões, cores e condições especiais de lançamento." },
   { id: "vw-polo-0km", tipo: "0km", marca: "Volkswagen", modelo: "Polo", versao: "Linha 2027", ano: "0 km", preco: null, km: 0, cambio: "Manual / Automático", combustivel: "Flex", cor: "Várias", carroceria: "Hatch", fotos: ["img/placeholder-carro.svg"], placeholder: true, descricao: "Consulte versões, cores e condições especiais de lançamento." },
-  { id: "vw-tera-0km", tipo: "0km", marca: "Volkswagen", modelo: "Tera", versao: "Linha 2027", ano: "0 km", preco: null, km: 0, cambio: "Manual / Automático", combustivel: "Flex", cor: "Várias", carroceria: "SUV", fotos: ["img/placeholder-carro.svg"], placeholder: true, descricao: "Consulte versões, cores e condições especiais de lançamento." },
-  { id: "vw-nivus-0km", tipo: "0km", marca: "Volkswagen", modelo: "Nivus", versao: "Linha 2027", ano: "0 km", preco: null, km: 0, cambio: "Automático", combustivel: "Flex", cor: "Várias", carroceria: "SUV", fotos: ["img/placeholder-carro.svg"], placeholder: true, descricao: "Consulte versões, cores e condições especiais de lançamento." },
-  { id: "vw-tcross-0km", tipo: "0km", marca: "Volkswagen", modelo: "T-Cross", versao: "Linha 2027", ano: "0 km", preco: null, km: 0, cambio: "Automático", combustivel: "Flex", cor: "Várias", carroceria: "SUV", fotos: ["img/placeholder-carro.svg"], placeholder: true, descricao: "Consulte versões, cores e condições especiais de lançamento." },
   { id: "vw-virtus-0km", tipo: "0km", marca: "Volkswagen", modelo: "Virtus", versao: "Linha 2027", ano: "0 km", preco: null, km: 0, cambio: "Manual / Automático", combustivel: "Flex", cor: "Várias", carroceria: "Sedã", fotos: ["img/placeholder-carro.svg"], placeholder: true, descricao: "Consulte versões, cores e condições especiais de lançamento." },
   { id: "vw-taos-0km", tipo: "0km", marca: "Volkswagen", modelo: "Taos", versao: "Linha 2027", ano: "0 km", preco: null, km: 0, cambio: "Automático", combustivel: "Flex", cor: "Várias", carroceria: "SUV", fotos: ["img/placeholder-carro.svg"], placeholder: true, descricao: "Consulte versões, cores e condições especiais de lançamento." },
   { id: "vw-saveiro-0km", tipo: "0km", marca: "Volkswagen", modelo: "Saveiro", versao: "Linha 2027", ano: "0 km", preco: null, km: 0, cambio: "Manual", combustivel: "Flex", cor: "Várias", carroceria: "Picape", fotos: ["img/placeholder-carro.svg"], placeholder: true, descricao: "Consulte versões, cores e condições especiais de lançamento." },
-  { id: "vw-amarok-0km", tipo: "0km", marca: "Volkswagen", modelo: "Amarok", versao: "Linha 2027", ano: "0 km", preco: null, km: 0, cambio: "Automático", combustivel: "Diesel", cor: "Várias", carroceria: "Picape", fotos: ["img/placeholder-carro.svg"], placeholder: true, descricao: "Consulte versões, cores e condições especiais de lançamento." },
 ];

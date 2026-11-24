@@ -1,0 +1,103 @@
+/* Hero 3D — Volkswagen Tera
+   Depende das variáveis do site: --navy, --vw, --font-head, --font-body (com fallback abaixo). */
+/* =========================================================
+   HERO 3D — Volkswagen Tera
+   ========================================================= */
+.tera {
+  --rx: 0deg; --ry: 0deg;
+  position: relative; isolation: isolate;
+  margin-right: calc(-1 * min(6vw, 80px));
+  padding-top: 1rem;
+  user-select: none;
+}
+.tera__word {
+  position: absolute; inset: 0 0 auto 0; z-index: -1; top: 4%;
+  text-align: center; font: 900 clamp(5rem, 12.5vw, 11.5rem)/1 var(--font-head, Montserrat, system-ui, sans-serif);
+  letter-spacing: .04em;
+  background: linear-gradient(180deg, rgba(255,255,255,.16), rgba(255,255,255,0) 85%);
+  -webkit-background-clip: text; background-clip: text; color: transparent;
+}
+.tera__floor {
+  position: absolute; z-index: 0; left: 4%; right: 4%; bottom: -16%; height: 40%;
+  background: radial-gradient(closest-side, rgba(91,143,224,.55), rgba(91,143,224,.12) 60%, transparent 72%);
+  transform: perspective(600px) rotateX(70deg); filter: blur(2px);
+  animation: teraPulse 5s ease-in-out infinite;
+}
+.tera__floor::after { /* anel do "toca-discos" */
+  content: ""; position: absolute; inset: 14% 10%; border-radius: 50%;
+  border: 2px solid rgba(255,255,255,.18); box-shadow: 0 0 40px rgba(91,143,224,.5) inset;
+}
+@keyframes teraPulse { 50% { opacity: .7; } }
+
+.tera__stage {
+  position: relative; aspect-ratio: 1400 / 600; cursor: grab; outline: none;
+  perspective: 1400px;
+  transform: rotateX(var(--rx)) rotateY(var(--ry));
+  transform-style: preserve-3d; transition: transform .25s ease-out;
+  animation: teraFloat 6s ease-in-out infinite;
+  touch-action: pan-y;
+}
+.is-dragging .tera__stage { cursor: grabbing; }
+.tera__stage:focus-visible { outline: 2px dashed rgba(255,255,255,.5); outline-offset: 8px; border-radius: 12px; }
+@keyframes teraFloat { 50% { translate: 0 -8px; } }
+
+.tera__view {
+  position: absolute; inset: 0; opacity: 0;
+  transform: translateX(0) rotateY(0) scale(1);
+  transition: opacity .6s ease, transform .7s cubic-bezier(.2,.7,.2,1), filter .7s;
+  will-change: transform, opacity;
+}
+.tera__view img { width: 100%; height: 100%; object-fit: contain; pointer-events: none;
+  filter: drop-shadow(0 18px 18px rgba(0,0,0,.35)); }
+/* brilho que passa pela lataria (máscara = a própria foto) */
+.tera__view::after {
+  content: ""; position: absolute; inset: 0; pointer-events: none;
+  -webkit-mask: var(--src) center / contain no-repeat; mask: var(--src) center / contain no-repeat;
+  background: linear-gradient(105deg, transparent 35%, rgba(255,255,255,.55) 48%, rgba(255,255,255,.1) 52%, transparent 62%);
+  background-size: 300% 100%; background-position: 120% 0;
+  mix-blend-mode: soft-light;
+}
+.tera__view.is-active { opacity: 1; z-index: 2; }
+.tera__view.is-active::after { animation: teraShine 3.2s ease-in-out .3s; }
+.tera__view.from-right { transition: none; transform: translateX(22%) rotateY(-38deg) scale(.86); filter: blur(4px); }
+.tera__view.from-left  { transition: none; transform: translateX(-22%) rotateY(38deg) scale(.86); filter: blur(4px); }
+.tera__view.to-left  { transform: translateX(-22%) rotateY(38deg) scale(.86); filter: blur(4px); }
+.tera__view.to-right { transform: translateX(22%) rotateY(-38deg) scale(.86); filter: blur(4px); }
+@keyframes teraShine { from { background-position: 120% 0; } to { background-position: -40% 0; } }
+
+.tera__shadow {
+  position: absolute; z-index: 1; left: 18%; right: 18%; bottom: 2%; height: 9%;
+  background: radial-gradient(closest-side, rgba(0,0,0,.55), transparent);
+  filter: blur(6px);
+}
+.tera__hint { text-align: center; font-size: .72rem; letter-spacing: .14em; text-transform: uppercase; color: #9fb6dd; margin-top: .4rem; }
+
+.tera__bar {
+  margin-top: 1rem; display: flex; align-items: center; justify-content: space-between; gap: 1rem; flex-wrap: wrap;
+  background: rgba(255,255,255,.07); border: 1px solid rgba(255,255,255,.12);
+  backdrop-filter: blur(8px); border-radius: 18px; padding: .8rem .9rem .8rem 1.2rem;
+  margin-right: min(6vw, 80px);
+}
+.tera__title small { display: block; font-size: .75rem; text-transform: uppercase; letter-spacing: .12em; color: #a9bfe6; }
+.tera__title strong { font: 900 1.5rem/1.1 var(--font-head, Montserrat, system-ui, sans-serif); }
+.tera__title strong span { font: 700 .75rem var(--font-body, Inter, system-ui, sans-serif); background: var(--vw, #001e50); border: 1px solid rgba(255,255,255,.3); padding: .25rem .5rem; border-radius: 6px; vertical-align: middle; margin-left: .3rem; }
+.tera__dots { display: flex; gap: .35rem; justify-content: center; margin-top: .6rem; margin-right: min(6vw, 80px); }
+.tera__dots button {
+  border: 1px solid rgba(255,255,255,.25); background: transparent; color: #cfdcf3;
+  font: 600 .75rem var(--font-body, Inter, system-ui, sans-serif); padding: .45rem .7rem; border-radius: 999px; cursor: pointer; transition: .2s;
+}
+.tera__dots button[aria-selected="true"] { background: #fff; color: var(--navy, #142b52); border-color: #fff; }
+.tera__dots button:hover { border-color: #fff; }
+
+@media (max-width: 900px) {
+  .tera { margin-right: 0; order: -1; }
+  .tera__bar, .tera__dots { margin-right: 0; }
+  .tera__word { font-size: 28vw; }
+}
+@media (max-width: 640px) {
+  .tera__dots { margin-right: 0; flex-wrap: wrap; }
+  .tera__dots button { padding: .4rem .6rem; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .tera__stage { transform: none; }
+}

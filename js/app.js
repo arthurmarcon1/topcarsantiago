@@ -155,7 +155,7 @@
       ? `Olá, Top Car! Quero uma cotação do *Volkswagen ${v.modelo} 0 km*. Pode me passar versões, cores e condições?`
       : msgVeiculo(v);
     return `
-      <article class="card ${v.placeholder ? "card--ph" : ""}">
+      <article class="card ${v.placeholder ? "card--ph" : ""} ${v.recorte ? "card--recorte" : ""}">
         <a href="${linkVeiculo(v)}" class="card__media">
           <img src="${esc(v.fotos[0])}" alt="${esc(nomeCarro(v))}" loading="lazy">
           <span class="badge ${is0 ? "badge--0km" : ""}">${is0 ? "0 km" : "Seminovo"}</span>
